@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="pokemon.css">
+
+    <meta charset="utf-8">
+    <title>Pokemon Team Planner</title>
+
+  </head>
+
+  <body>
+
+    <div class="top">
+
+    <h1 align=center>Pokemon Team Planner</h1>
+
+    <div class="party">
+      <div id="partySlot1" class="partySlot"></div>
+      <div id="partySlot2" class="partySlot"></div>
+      <div id="partySlot3" class="partySlot"></div>
+      <div id="partySlot4" class="partySlot"></div>
+      <div id="partySlot5" class="partySlot"></div>
+      <div id="partySlot6" class="partySlot"></div>
+    </div>
+
+
+    </div>
+
+    <div class="middle">
+
+    <h2 align=center>Pokemon</h2>
+
+    <div class="midGrid">
+      <table class="filters" align=center width=320px>
+        <tr>
+          <td class="filtersText">Filters</td>
+          <td>
+            <div class="dropdown">
+              <button class="dropdownButton">Select Region <i class="arrow"></i></button>
+              <div id="firstDD" class="dropdownContent">
+                <div id="One" class="dropdownRow">
+                  <div class="col">
+                    <a href="javascript:void(0)" onclick="filterByRegion('Kanto')">Kanto</a>
+                    <a href="javascript:void(0)" onclick="filterByRegion('Johto')">Johto</a>
+                    <a href="javascript:void(0)" onclick="filterByRegion('Hoenn')">Hoenn</a>
+                    <a href="javascript:void(0)" onclick="filterByRegion('Sinnoh')">Sinnoh</a>
+                    <a href="javascript:void(0)" onclick="filterByRegion('Unova')">Unova</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="dropdown">
+              <button class="dropdownButton">Select Type <i class="arrow"></i></button>
+
+              <div class="dropdownContent">
+                <div class="types1">
+                  <div id="One" class="dropdownRow">
+                    <div class="col">
+                      <a href="javascript:void(0)" onclick="filterByType('Normal')">Normal</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Fighting')">Fighting</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Flying')">Flying</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Poison')">Poison</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Ground')">Ground</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Rock')">Rock</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Bug')">Bug</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Ghost')">Ghost</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Steel')">Steel</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="types2">
+                  <div id="Two" class="dropdownRow">
+                    <div class="col">
+                      <a href="javascript:void(0)" onclick="filterByType('Fire')">Fire</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Water')">Water</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Grass')">Grass</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Electric')">Electric</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Psychic')">Psychic</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Ice')">Ice</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Dragon')">Dragon</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Dark')">Dark</a>
+                      <a href="javascript:void(0)" onclick="filterByType('Fairy')">Fairy</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </td>
+        </div>
+        </tr>
+      </table>
+
+      <input type="text" id="searchInput" onkeyup="filterByName()" placeholder="Search by name...">
+    </div> <!----end of grid for filters and search---->
+
+    </div> <!---*middle div*--->
+
+
+    <!--POKEMON LIST-->
+    <div id="grid" class="grid"></div>
+    <div class="bottom"></div>
+    
+     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="pokemon.js"></script>
+  </body>
+
+
+</html>
